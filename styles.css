@@ -1,0 +1,21 @@
+/* Hex codes:
+    font: #E7ECEF
+    player sections: #274C77
+    main: #6096BA */
+
+body {
+  font-family: Poppins;
+  background-color:#73A9CC;
+  color: #E7ECEF;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-info-box {
+  background: #274C77;
+  width: 17%;
+}
+
+.game-options{
+    border-style: solid
+}

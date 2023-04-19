@@ -1,18 +1,22 @@
 <html>
     <head>
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <section>
-            <h2>Player</h2>
-      </section>
+        <section class="player-info-box" id="you">
+            <h2>You</h2>
+        </section>
         <main>
             <!-- Title, instructions, and games go here -->
             <header>
                 <h1>Rock 🪨 Paper 📄 Scissors ✂️ </h1>
                 <h2>Choose your game!</h2>
             </header>
-            <section>
+            <section id="game-options">
                 <section>
                     <button class="game-button">Classic</button>
                     <p>
@@ -27,7 +31,7 @@
                 </section>
             </section>
         </main>
-        <section>
+        <section  class="player-info-box" id="computer">
             <h2>Computer</h2>
         </section>
     </body>
