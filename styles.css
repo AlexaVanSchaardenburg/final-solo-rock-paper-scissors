@@ -1,12 +1,13 @@
 /* Hex codes:
-    font: #E7ECEF
-    player sections: #274C77
-    main: #6096BA */
+#748CAB
+#38424D
+#BDC4D8
+*/
 
 body {
   font-family: Poppins;
-  background-color:#73A9CC;
-  color: #E7ECEF;
+  background-color:#38424D;
+  color: #BDC4D8;
   display: flex;
   justify-content: space-between;
 }
@@ -16,29 +17,38 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: solid red; */
   width: 60%
 }
 
+h1{
+  margin: 0px;
+}
+
+h2{
+  font-size: 20px
+}
+
 .player-info-box {
-  background: #274C77;
+  background:#BDC4D8;
+  color: #38424D;
   width: 20%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   border-radius: 10px;
-  /* border: solid red */
 }
+
+/* Game Options */
 
 #game-options {
   width: 100%;
     display: flex;
     justify-content: space-around;
     margin: 20px;
-    /* border: solid red; */
 }
 
 .game-option {
-  background: #274C77;
+  background: #748CAB;
   font-size: 12px;
   padding: 10px;
   border-radius: 10px;
@@ -49,11 +59,27 @@ main {
 }
 
 button{
-  background: #E7ECEF;
-  color:#73A9CC;
+  background: #BDC4D8;
+  color:#38424D;
   border: none;
   width: 80%;
   padding: 5px;
   border-radius: 10px;
+  cursor: pointer; 
+  font-weight: bold;
+  margin-bottom: 20px
 }
 
+p{
+  /* border: solid red; */
+  margin: 0px;
+  text-align: center;
+}
+
+.rules{
+  margin-top: 30px
+}
+
+.hidden{
+  display: none
+}
