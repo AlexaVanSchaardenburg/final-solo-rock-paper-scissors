@@ -102,6 +102,7 @@ p{
 .fighter{
   height: 100px;
   margin:0px 5px 40px;
+  cursor: pointer;
 }
 
 #rock-img{
