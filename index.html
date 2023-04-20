@@ -11,13 +11,12 @@
             <h2>You</h2>
             <p>Wins: 0</p>
         </section>
-        <main class="home">
-            <!-- Title, instructions, and games go here -->
+        <main class="home hidden">
             <h1>Rock • Paper • Scissors</h1>
             <h2>Choose your game!</h2>
             <section id="game-options">
                 <section class="game-option">
-                    <button class="game-button">Play Classic!</button>
+                    <button id="classic-button">Play Classic!</button>
                     <p>Play classic rock, paper, scissors! <br>🪨Rock🪨 📄Paper📄 ✂️Scissors✂️</p>
                     <section class="rules">
                         <p>Classic Rules:</p>
@@ -27,7 +26,7 @@
                     </section>
                 </section>
                 <section class="game-option">
-                    <button class="game-button">Play Bender!</button>
+                    <button id="bender-button">Play Bender!</button>
                     <p>Bend the elements! <br>🌬️Air🌬️ 🔥Fire🔥 🪨Earth🪨 🌊 Water🌊 ✨Spirits✨</p>
                     <section class="rules">
                         <p>Bending Rules:</p>
@@ -39,6 +38,25 @@
                     </section>
                 </section>
             </section>
+        </main>
+        <main class="classic-game">
+            <h1>Rock • Paper • Scissors</h1>
+            <h2>Choose your fighter!</h2>
+            <button>Go Back to Games</button>
+            <section class="fighter-options">
+                <img class="fighter" id="rock-img" src="http://clipart-library.com/img/1603206.png" alt="Rock">
+                <img class="fighter" id="paper-img" src="https://img.favpng.com/7/24/9/emoji-paper-sticker-sms-email-png-favpng-cWCWNMe8sfFe5DWSeKB4i3wxH.jpg" alt="paper">
+                <img class="fighter" id="scissors-img" src="" alt="scissors">
+            </section>
+        </main>
+        <main class="bender-game hidden">
+            <h1>Rock • Paper • Scissors</h1>
+            <h2>Choose your fighter!</h2>
+            <button>Go Back to Games</button>
+        </main>
+        <main class="winner-annoucment hidden">
+            <h1>Rock • Paper • Scissors</h1>
+            <h2>User Wins!</h2>
         </main>
         <section  class="player-info-box" id="computer">
             <h2>Computer</h2>

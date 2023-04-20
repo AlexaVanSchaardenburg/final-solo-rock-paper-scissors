@@ -83,3 +83,9 @@ p{
 .hidden{
   display: none
 }
+
+/* Game pages */
+
+.fighter{
+  height: 100px
+}
