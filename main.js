@@ -10,10 +10,39 @@ var computerFighter;
 
 
 //Global Variables
+var playClassicButton = document.querySelector('#classic-button');
+var playBenderButton = document.querySelector('#bender-button');
+var homePage = document.querySelector('.home');
+var classicGamePage = document.querySelector('.classic-game');
+var benderGamePage = document.querySelector('.bender-game');
+var classicToHomeButton = document.querySelectorAll('#classic-to-home')
+var benderToHomeButton = document.querySelectorAll('#bender-to-home')
 
 //Event Listeners
+playClassicButton.addEventListener('click', showClassicGame);
+playBenderButton.addEventListener('click', showBenderGame);
+// classicToHomeButton.addEventListener('click', goBackToHome);
+// benderToHomeButton.addEventListener('click', goBackToHome);
+
 
 //Functions
+
+function showClassicGame(){
+    homePage.classList.add('hidden')
+    classicGamePage.classList.remove('hidden')
+};
+
+function showBenderGame(){
+    homePage.classList.add('hidden')
+    benderGamePage.classList.remove('hidden')
+};
+
+// function goBackToHome(){
+//     homePage.classList.remove('hidden')
+//     benderGamePage.classList.add('hidden')
+//     classicGamePage.classList.add('hidden')
+//     console.log('click heard')
+// }
 
 /* 
 PROCESS FOR CLASSIC:
