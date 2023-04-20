@@ -11,74 +11,77 @@
             <h2>You</h2>
             <p>Wins: 0</p>
         </section>
-        <main class="home">
+        <section class="game-info">
             <h1>Rock • Paper • Scissors</h1>
-            <h2>Choose your game!</h2>
-            <section id="game-options">
-                <section class="game-option">
-                    <button id="classic-button">Play Classic!</button>
-                    <p>Play classic rock, paper, scissors! <br>🪨Rock🪨 📄Paper📄 ✂️Scissors✂️</p>
-                    <section class="rules">
-                        <p>Classic Rules:</p>
-                        <p>📄 covers 🪨</p>
-                        <p>✂️ cuts 📄</p>
-                        <p>🪨 smashes ✂️</p>
+            <main class="home">
+                <h2>Choose your game!</h2>
+                <section id="game-options">
+                    <section class="game-option">
+                        <button id="classic-button">Play Classic!</button>
+                        <p>Play classic rock, paper, scissors! <br>🪨Rock🪨 📄Paper📄 ✂️Scissors✂️</p>
+                        <section class="rules">
+                            <p>Classic Rules:</p>
+                            <p>📄 covers 🪨</p>
+                            <p>✂️ cuts 📄</p>
+                            <p>🪨 smashes ✂️</p>
+                        </section>
+                    </section>
+                    <section class="game-option">
+                        <button id="bender-button">Play Bender!</button>
+                        <p>Bend the elements! <br>🌬️Air🌬️ 🔥Fire🔥 🪨Earth🪨 🌊 Water🌊 ✨Spirits✨</p>
+                        <section class="rules">
+                            <p>Bending Rules:</p>
+                            <p>🌊water🌊 beats 🪨 & 🔥</p>
+                            <p>🪨earth🪨 beats 🌬️ & 🔥</p>
+                            <p>🌬️air🌬️ beats ✨ & 🌊 </p>
+                            <p>🔥fire🔥 beats 🌬️ & ✨</p>
+                            <p>✨spirit✨ beats 🌊 & 🪨 </p>
+                        </section>
                     </section>
                 </section>
-                <section class="game-option">
-                    <button id="bender-button">Play Bender!</button>
-                    <p>Bend the elements! <br>🌬️Air🌬️ 🔥Fire🔥 🪨Earth🪨 🌊 Water🌊 ✨Spirits✨</p>
-                    <section class="rules">
-                        <p>Bending Rules:</p>
-                        <p>🌊 beats 🪨 & 🔥</p>
-                        <p>🪨 beats 🌬️ & 🔥</p>
-                        <p>🌬️ beats ✨ & 🌊 </p>
-                        <p>🔥 beats 🌬️ & ✨</p>
-                        <p>✨ beats 🌊 & 🪨 </p>
-                    </section>
+            </main>
+            <main class="classic-game hidden">
+                <h2>Choose your fighter!</h2>
+                <section class="fighter-options" id="classic-options">
+                    <img class="fighter" id="rock-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSzmgDCFMwpoQmc3HpGtiZbBsLUbU8U_Q8ieUHwd5vULs5DPYnbllzG8gT4MocpyT_pYLpCqMKxKgHNlN2ShlzmddN5dA=s2560" alt="Rock">
+                    <img class="fighter" id="paper-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEORV8Y7IGEjBOcarUqfjlUeEGKIsfiKAcbZTfT7cs4arv4joLWXCmYpTJUwE9emUdkQpVGCVg33ytaWLChEk3CLGdom1Pw=s2560" alt="paper">
+                        <img class="fighter" id="scissors-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEORxY6MonbE2QikFBOjEu9i118ZDTzviC-2O7CDugbTL28Q0LtXK75lLHQxYF_EBdckneOsvw84kvGS-Fk6oHJJ4iK77lA=s2560" alt="scissors">
                 </section>
-            </section>
-        </main>
-        <main class="classic-game hidden">
-            <h1>Rock • Paper • Scissors</h1>
-            <h2>Choose your fighter!</h2>
-            <section class="fighter-options" id="classic-options">
-                <img class="fighter" id="rock-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSzmgDCFMwpoQmc3HpGtiZbBsLUbU8U_Q8ieUHwd5vULs5DPYnbllzG8gT4MocpyT_pYLpCqMKxKgHNlN2ShlzmddN5dA=s2560" alt="Rock">
-                <img class="fighter" id="paper-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEORV8Y7IGEjBOcarUqfjlUeEGKIsfiKAcbZTfT7cs4arv4joLWXCmYpTJUwE9emUdkQpVGCVg33ytaWLChEk3CLGdom1Pw=s2560" alt="paper">
-                <img class="fighter" id="scissors-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEORxY6MonbE2QikFBOjEu9i118ZDTzviC-2O7CDugbTL28Q0LtXK75lLHQxYF_EBdckneOsvw84kvGS-Fk6oHJJ4iK77lA=s2560" alt="scissors">
-            </section>
-            <section class="in-game-rules">
-                 <p>Rules:</p>
-                <p>📄 covers 🪨</p>
-                <p>✂️ cuts 📄</p>
-                <p>🪨 smashes ✂️ </p>
-            </section>
-            <button class="back-to-home-button" id="classic-to-home">Go Back to Games</button>
-        </main>
-        <main class="bender-game hidden">
-            <h1>Rock • Paper • Scissors</h1>
-            <h2>Choose your fighter!</h2>
-            <section>
-                <img class="fighter" id="earth-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTUHJKlKO_XulXT4bZuvS1gIjLCV1gEQO4pPdpfuWK9zdjBRW3_YqG8A93DtIyC-lb3p9HkadHtld1ACkkvJkkFsWpm7Q=s2560" alt="Earth">
-                <img class="fighter" id="water-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOT37JbXKW4WoppiVg8ne1-gpWi5qvImIx1_WNI6YF8RW9SHbKTlMTxX9iS6DFGtSU0qGPFGnPZ7W-0UQvF_2mPWyd9BVA=s2560" alt="Water">
-                <img class="fighter" id="spirit-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSgnSeAhgOcz-lUXONR8XWZNnpI-53zeutPvMRG0iecZngwIiuQOWHSpIWmGfMwATcQ7Z7ywejC96pLx-F6KQ=s1600" alt="Spirit">
-                <img class="fighter" id="air-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSoYt6qfxugqKlNlc_lCUAMeSLJ53PGvZRHOS0QPBQtcwfn5mGoA8TaCOBbiwUB0e7rG_En6gXAi3LGNRkCqRjYWyxlow=s2560" alt="Air">
-                <img class="fighter" id="fire-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTfnx1a8z6KczG9bVJAUzh1EyGwM9k7AO4G0pb0ssF2Q37gG30aEcwjBjlp6I5ZmLM1jMY-Mz5EsGecxjRF8LrL8E_UbA=s2560" alt="Fire">
-            </section>
-            <section class="in-game-rules">
-                <p>Rules:</p>
-                <p>🌊 beats 🪨 & 🔥</p>
-                <p>🪨 beats 🌬️ & 🔥</p>
-                <p>🌬️ beats ✨ & 🌊 </p>
-                <p>🔥 beats 🌬️ & ✨</p>
-                <p>✨ beats 🌊 & 🪨 </p>
-            </section>
-            <button class="back-to-home-button" id="bender-to-home">Go Back to Games</button>
-        </main>
-        <main class="winner-annoucment hidden">
-            <h1>Rock • Paper • Scissors</h1>
-            <h2>User Wins!</h2>
-        </main>
+                <section class="in-game-rules">
+                     <p>Rules:</p>
+                    <p>📄 covers 🪨</p>
+                    <p>✂️ cuts 📄</p>
+                    <p>🪨 smashes ✂️ </p>
+                </section>
+            </main>
+            <main class="bender-game hidden">
+                <h2>Choose your fighter!</h2>
+                <section  class="fighter-options" id="bender-options">
+                    <p>Earth</p>
+                    <img class="fighter" id="earth-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTUHJKlKO_XulXT4bZuvS1gIjLCV1gEQO4pPdpfuWK9zdjBRW3_YqG8A93DtIyC-lb3p9HkadHtld1ACkkvJkkFsWpm7Q=s2560" alt="Earth">
+                    <p>Water</p>
+                    <img class="fighter" id="water-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOT37JbXKW4WoppiVg8ne1-gpWi5qvImIx1_WNI6YF8RW9SHbKTlMTxX9iS6DFGtSU0qGPFGnPZ7W-0UQvF_2mPWyd9BVA=s2560" alt="Water">
+                    <p>Spirit</p>
+                    <img class="fighter" id="spirit-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSgnSeAhgOcz-lUXONR8XWZNnpI-53zeutPvMRG0iecZngwIiuQOWHSpIWmGfMwATcQ7Z7ywejC96pLx-F6KQ=s1600" alt="Spirit">
+                    <p>Air</p>
+                    <img class="fighter" id="air-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSoYt6qfxugqKlNlc_lCUAMeSLJ53PGvZRHOS0QPBQtcwfn5mGoA8TaCOBbiwUB0e7rG_En6gXAi3LGNRkCqRjYWyxlow=s2560" alt="Air">
+                    <p>Fire</p>
+                    <img class="fighter" id="fire-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTfnx1a8z6KczG9bVJAUzh1EyGwM9k7AO4G0pb0ssF2Q37gG30aEcwjBjlp6I5ZmLM1jMY-Mz5EsGecxjRF8LrL8E_UbA=s2560" alt="Fire">
+                </section>
+                <section class="in-game-rules">
+                    <p>Rules:</p>
+                    <p>🌊water🌊 beats 🪨 & 🔥</p>
+                    <p>🪨earth🪨 beats 🌬️ & 🔥</p>
+                    <p>🌬️air🌬️ beats ✨ & 🌊 </p>
+                    <p>🔥fire🔥 beats 🌬️ & ✨</p>
+                    <p>✨spirit✨ beats 🌊 & 🪨 </p>
+                </section>
+            </main>
+            <main class="winner-annoucment hidden">
+                <h2>User Wins!</h2>
+            </main>
+            <button class="back-to-home-button hidden">Go Back to Games</button>
+        </section>
         <section  class="player-info-box" id="computer">
             <h2>Computer</h2>
             <p>Wins: 0</p>
