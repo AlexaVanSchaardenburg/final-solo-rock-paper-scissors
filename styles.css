@@ -87,5 +87,14 @@ p{
 /* Game pages */
 
 .fighter{
-  height: 100px
+  height: 100px;
+  margin:0px 5px 40px;
+}
+
+#rock-img{
+  height: 120px;
+}
+
+.in-game-rules{
+  margin-bottom: 50px
 }
