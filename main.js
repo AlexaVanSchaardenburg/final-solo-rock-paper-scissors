@@ -106,6 +106,7 @@ function determineWinner(fighters){
 
 function determineWinnerOfClassic(fighters){
     if(fighters[0] === 'paper' && fighters[1] === 'rock'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'scissors' && fighters[1] === 'paper'){
         console.log(`User wins this round`)
