@@ -15,12 +15,15 @@ var playBenderButton = document.querySelector('#bender-button');
 var homePage = document.querySelector('.home');
 var classicGamePage = document.querySelector('.classic-game');
 var benderGamePage = document.querySelector('.bender-game');
-var backToHomeButton = document.querySelector('.back-to-home-button')
+var classicToHomeButton = document.querySelectorAll('#classic-to-home')
+var benderToHomeButton = document.querySelectorAll('#bender-to-home')
 
 //Event Listeners
 playClassicButton.addEventListener('click', showClassicGame);
 playBenderButton.addEventListener('click', showBenderGame);
-backToHomeButton.addEventListener('click', goBackToHome);
+// classicToHomeButton.addEventListener('click', goBackToHome);
+// benderToHomeButton.addEventListener('click', goBackToHome);
+
 
 //Functions
 
@@ -34,12 +37,12 @@ function showBenderGame(){
     benderGamePage.classList.remove('hidden')
 };
 
-function goBackToHome(){
-    homePage.classList.remove('hidden')
-    benderGamePage.classList.add('hidden')
-    classicGamePage.classList.add('hidden')
-    console.log('click heard')
-}
+// function goBackToHome(){
+//     homePage.classList.remove('hidden')
+//     benderGamePage.classList.add('hidden')
+//     classicGamePage.classList.add('hidden')
+//     console.log('click heard')
+// }
 
 /* 
 PROCESS FOR CLASSIC:
