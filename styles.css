@@ -4,6 +4,8 @@
 #BDC4D8
 */
 
+/* All Pages */
+/* ----------------------------------------------- */
 body {
   font-family: Poppins;
   background-color:#38424D;
@@ -18,19 +20,12 @@ main {
   flex-direction: column;
   align-items: center;
   width: 700px;
-  /* border: solid red */
-}
-
-.fighter-options{
-  /* border: solid red; */
-  display: flex;
-
 }
 
 .game-info{
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 }
 
 h1{
@@ -44,31 +39,12 @@ h2{
 .player-info-box {
   background:#BDC4D8;
   color: #38424D;
-  width: 20%;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-}
-
-/* Game Options */
-
-#game-options {
-  width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-}
-
-.game-option {
-  background: #748CAB;
-  font-size: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* border: solid red; */
 }
 
 button{
@@ -84,20 +60,44 @@ button{
 }
 
 p{
-  /* border: solid red; */
   margin: 0px;
   text-align: center;
-}
-
-.rules{
-  margin-top: 30px
 }
 
 .hidden{
   display: none
 }
 
-/* Game pages */
+/* Home Page */
+/* ----------------------------------------------- */
+.rules{
+  margin-top: 30px
+}
+
+#game-options {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  /* border: solid red; */
+}
+
+.game-option {
+  background: #748CAB;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Game Pages */
+/* ----------------------------------------------- */
+.fighter-options{
+  display: flex;
+}
 
 .fighter{
   height: 100px;
@@ -110,5 +110,8 @@ p{
 }
 
 .in-game-rules{
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
+
+/* Results Page */
+/* ----------------------------------------------- */
