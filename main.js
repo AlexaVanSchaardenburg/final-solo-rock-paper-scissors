@@ -1,5 +1,7 @@
 //Data Model
 var currentGame = 'bender'
+var user = createPlayer('user', '🤗')
+var computer = createPlayer('computer', '💻')
 
 //Global Variables
 var playClassicButton = document.querySelector('#classic-button');
@@ -41,15 +43,14 @@ function showClassicGame(){
     homePage.classList.add('hidden')
     classicGamePage.classList.remove('hidden')
     backHomeButton.classList.remove('hidden')
-    currentGame = createGame('classic')
-    //updates DM with current game 
+    currentGame = 'classic'
 };
 
 function showBenderGame(){
     homePage.classList.add('hidden')
     benderGamePage.classList.remove('hidden')
     backHomeButton.classList.remove('hidden')
-    currentGame = createGame('bender')
+    currentGame = 'bender'
 };
 
 function goBackToHome(){
@@ -69,18 +70,16 @@ function takeTurn(userFighter){
     currentFighters.push(userFighter)
     currentFighters.push(computerFighter)
     determineWinner(currentFighters)
-    console.log(currentFighters)
+    // console.log(currentFighters)
 };
 
 function randomFighter(game){
     var classicOptions = ['rock', 'paper','scissors'];
     var benderOptions = ['water', 'earth', 'air', 'fire', 'spirit'];
     if (game === 'classic') {
-        //randomly select from classic options array
         var index = getRandomIndex(classicOptions)
         return classicOptions[index]
     } else if (game === 'bender'){
-        //randomly select from bender array
         var index = getRandomIndex(benderOptions)
         return benderOptions[index]
     }
@@ -105,48 +104,68 @@ function determineWinnerOfClassic(fighters){
         user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'scissors' && fighters[1] === 'paper'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'rock' && fighters[1] === 'scissors'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else {
+        computer.wins += 1
         console.log(`Computer wins this round`)
     }
+    displayWins()
 };
 
 function determineWinnerOfBender(fighters){
     if(fighters[0] === fighters[1]){
+        user.wins += 1
         console.log('Its a draw!')
     } else if (fighters[0] === 'water' && fighters[1] === 'fire'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'water' && fighters[1] === 'rock'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'earth' && fighters[1] === 'air'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'earth' && fighters[1] === 'fire'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'air' && fighters[1] === 'water'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'air' && fighters[1] === 'spirit'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'fire' &&fighters[1] === 'spirit'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'fire' && fighters[1] === 'air'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'spirit' && fighters[1] === 'earth'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else if (fighters[0] === 'spirit' && fighters[1] === 'water'){
+        user.wins += 1
         console.log(`User wins this round`)
     } else {
         console.log(`Computer wins this round`)
+        computer.wins += 1
     }
+    displayWins()
+    displayResults()
 };
 
-function displayResults(){
-
+function displayResults(fighters){
+    //shows players fighters as images with their token next to it
+    //has a sentence for which one won
+    //timeout function to 
 };
 
 function displayWins(){
-
+    console.log('user wins:' + user.wins + '   computer wins:' + computer.wins)
 };
 
 function resetPage(){

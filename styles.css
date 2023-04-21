@@ -39,11 +39,12 @@ h2{
 .player-info-box {
   background:#BDC4D8;
   color: #38424D;
-  width: 20%;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  /* border: solid red; */
 }
 
 button{
@@ -74,10 +75,11 @@ p{
 }
 
 #game-options {
-  width: 100%;
+  width: 500px;
   display: flex;
   justify-content: space-around;
   margin: 20px;
+  /* border: solid red; */
 }
 
 .game-option {
