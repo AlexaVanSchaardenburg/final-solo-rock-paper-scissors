@@ -90,75 +90,66 @@ function getRandomIndex(array) {
 };
 
 function determineWinner(fighters){
-    if (currentGame === 'classic'){
-        determineWinnerOfClassic(fighters)
-    } else if (currentGame === 'bender'){
-        determineWinnerOfBender(fighters)
-    }
+    console.log(fighters)
+    if (fighters[0] === fighters[1]){
+        return `It's a draw!`
+    } else if (fighters[0] === 'paper' && fighters[1] === 'rock'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'scissors' && fighters[1] === 'paper'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'rock' && fighters[1] === 'scissors'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'water' && fighters[1] === 'fire'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'water' && fighters[1] === 'rock'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'earth' && fighters[1] === 'air'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'earth' && fighters[1] === 'fire'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'air' && fighters[1] === 'water'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'air' && fighters[1] === 'spirit'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'fire' &&fighters[1] === 'spirit'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'fire' && fighters[1] === 'air'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'spirit' && fighters[1] === 'earth'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else if (fighters[0] === 'spirit' && fighters[1] === 'water'){
+        user.wins += 1
+        return `You WIN! 🎉`
+    } else {
+        computer.wins += 1
+        return `The computer wins this round 😭`
+    } 
 };
 
 function determineWinnerOfClassic(fighters){
-    if(fighters[0] === fighters[1]){
-        console.log('Its a draw!')
-    } else if(fighters[0] === 'paper' && fighters[1] === 'rock'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'scissors' && fighters[1] === 'paper'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'rock' && fighters[1] === 'scissors'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else {
-        computer.wins += 1
-        console.log(`Computer wins this round`)
-    }
-    displayWins()
-};
 
-function determineWinnerOfBender(fighters){
-    if(fighters[0] === fighters[1]){
-        user.wins += 1
-        console.log('Its a draw!')
-    } else if (fighters[0] === 'water' && fighters[1] === 'fire'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'water' && fighters[1] === 'rock'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'earth' && fighters[1] === 'air'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'earth' && fighters[1] === 'fire'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'air' && fighters[1] === 'water'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'air' && fighters[1] === 'spirit'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'fire' &&fighters[1] === 'spirit'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'fire' && fighters[1] === 'air'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'spirit' && fighters[1] === 'earth'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else if (fighters[0] === 'spirit' && fighters[1] === 'water'){
-        user.wins += 1
-        console.log(`User wins this round`)
-    } else {
-        console.log(`Computer wins this round`)
-        computer.wins += 1
-    }
-    displayWins()
-    displayResults()
-};
+}
+
 
 function displayResults(fighters){
+    // var winnerStatement = ''
+    // if (currentGame === 'classic') {
+    //     winnerStatement = determineWinnerOfClassic(fighters)
+    // } else if (currentGame === 'bender'){
+    //     winnerStatement = determineWinnerOfBender(fighters)
+    // }
     //shows players fighters as images with their token next to it
     //has a sentence for which one won
     //timeout function to 
@@ -168,14 +159,6 @@ function displayWins(){
     console.log('user wins:' + user.wins + '   computer wins:' + computer.wins)
 };
 
-function resetPage(){
+// function resetPage(){
 
-}
-
-/* 
-Game pseudo code - classic:
-1. event listner on main to hear click on image
-2. when click happen target image to invoke player function - image clicked should determine which player the user uses
-3. function 
-*/
-
+// };
