@@ -9,6 +9,7 @@ var playBenderButton = document.querySelector('#bender-button');
 var homePage = document.querySelector('.home');
 var classicGamePage = document.querySelector('.classic-game');
 var benderGamePage = document.querySelector('.bender-game');
+var gamePage = document.querySelector('.game-page')
 var resultsPage = document.querySelector('.winner-annoucment')
 var backHomeButton = document.querySelector('.back-to-home-button')
 var userWins = document.querySelector('#user-wins')
@@ -21,6 +22,9 @@ var computerFighter = document.querySelector('#computer-selected-fighter')
 playClassicButton.addEventListener('click', showClassicGame);
 playBenderButton.addEventListener('click', showBenderGame);
 backHomeButton.addEventListener('click', goBackToHome);
+gamePage.addEventListener('click', function(e){
+    selectUserFighter(e)
+})
 
 
 //Functions
@@ -82,6 +86,10 @@ function showResultsPage(){
 }
 
 //functions to play game
+
+function selectUserFighter(e){
+    //e is target - write code to create userFighter based off of e and invoke takeTurn function
+}
 
 function takeTurn(userFighter){
     var currentFighters = []
