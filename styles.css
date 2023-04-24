@@ -95,6 +95,7 @@ p{
 
 /* Game Pages */
 /* ----------------------------------------------- */
+.selected-fighters,
 .fighter-options{
   display: flex;
 }

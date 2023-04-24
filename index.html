@@ -14,7 +14,7 @@
         </section>
         <section class="game-info">
             <h1>Rock • Paper • Scissors</h1>
-            <main class="home">
+            <main class="home hidden">
                 <h2>Choose your game!</h2>
                 <section id="game-options">
                     <section class="game-option">
@@ -58,16 +58,25 @@
             <main class="bender-game hidden">
                 <h2>Choose your fighter!</h2>
                 <section  class="fighter-options" id="bender-options">
-                    <p>🪨 Earth 🪨</p>
-                    <img class="fighter" id="earth-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTUHJKlKO_XulXT4bZuvS1gIjLCV1gEQO4pPdpfuWK9zdjBRW3_YqG8A93DtIyC-lb3p9HkadHtld1ACkkvJkkFsWpm7Q=s2560" alt="Earth">
-                    <p>🌊 Water 🌊</p>
-                    <img class="fighter" id="water-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOT37JbXKW4WoppiVg8ne1-gpWi5qvImIx1_WNI6YF8RW9SHbKTlMTxX9iS6DFGtSU0qGPFGnPZ7W-0UQvF_2mPWyd9BVA=s2560" alt="Water">
-                    <p>✨ Spirit ✨</p>
-                    <img class="fighter" id="spirit-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSgnSeAhgOcz-lUXONR8XWZNnpI-53zeutPvMRG0iecZngwIiuQOWHSpIWmGfMwATcQ7Z7ywejC96pLx-F6KQ=s1600" alt="Spirit">
-                    <p>🌬️ Air 🌬️</p>
-                    <img class="fighter" id="air-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSoYt6qfxugqKlNlc_lCUAMeSLJ53PGvZRHOS0QPBQtcwfn5mGoA8TaCOBbiwUB0e7rG_En6gXAi3LGNRkCqRjYWyxlow=s2560" alt="Air">
-                    <p>🔥 Fire 🔥</p>
-                    <img class="fighter" id="fire-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTfnx1a8z6KczG9bVJAUzh1EyGwM9k7AO4G0pb0ssF2Q37gG30aEcwjBjlp6I5ZmLM1jMY-Mz5EsGecxjRF8LrL8E_UbA=s2560" alt="Fire">
+                    <div class="fighter-and-caption">
+                        <p>🪨 Earth 🪨</p>
+                        <img class="fighter" id="earth-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTUHJKlKO_XulXT4bZuvS1gIjLCV1gEQO4pPdpfuWK9zdjBRW3_YqG8A93DtIyC-lb3p9HkadHtld1ACkkvJkkFsWpm7Q=s2560" alt="Earth">
+                    </div>
+                    <div class="fighter-and-caption">
+                        <p>🌊 Water 🌊</p>
+                        <img class="fighter" id="water-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOT37JbXKW4WoppiVg8ne1-gpWi5qvImIx1_WNI6YF8RW9SHbKTlMTxX9iS6DFGtSU0qGPFGnPZ7W-0UQvF_2mPWyd9BVA=s2560" alt="Water">
+                    </div>
+                    <div class="fighter-and-caption">
+                        <p>✨ Spirit ✨</p>
+                        <img class="fighter" id="spirit-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSgnSeAhgOcz-lUXONR8XWZNnpI-53zeutPvMRG0iecZngwIiuQOWHSpIWmGfMwATcQ7Z7ywejC96pLx-F6KQ=s1600" alt="Spirit">
+                    </div>
+                    <div class="fighter-and-caption">
+                        <p>🌬️ Air 🌬️</p>
+                        <img class="fighter" id="air-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSoYt6qfxugqKlNlc_lCUAMeSLJ53PGvZRHOS0QPBQtcwfn5mGoA8TaCOBbiwUB0e7rG_En6gXAi3LGNRkCqRjYWyxlow=s2560" alt="Air">
+                    </div>
+                    <div class="fighter-and-caption">
+                        <p>🔥 Fire 🔥</p>
+                        <img class="fighter" id="fire-img" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTfnx1a8z6KczG9bVJAUzh1EyGwM9k7AO4G0pb0ssF2Q37gG30aEcwjBjlp6I5ZmLM1jMY-Mz5EsGecxjRF8LrL8E_UbA=s2560" alt="Fire"></div>
                 </section>
                 <section class="in-game-rules">
                     <p>Rules:</p>
@@ -78,8 +87,18 @@
                     <p>✨ beats 🌊 & 🪨 </p>
                 </section>
             </main>
-            <main class="winner-annoucment hidden">
-                <h2>User Wins!</h2>
+            <main class="winner-annoucment">
+                <h2 class="winner">User Wins!</h2>
+                <section class="selected-fighters">
+                    <div class="fighter-and-caption">
+                        <p>🤗</p>
+                        <img class="fighter" id="user-selected-fighter" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSoYt6qfxugqKlNlc_lCUAMeSLJ53PGvZRHOS0QPBQtcwfn5mGoA8TaCOBbiwUB0e7rG_En6gXAi3LGNRkCqRjYWyxlow=s2560" alt="Air">
+                    </div>
+                    <div class="fighter-and-caption">
+                        <p>💻</p>
+                        <img class="fighter" id="computer-selected-fighter" src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTfnx1a8z6KczG9bVJAUzh1EyGwM9k7AO4G0pb0ssF2Q37gG30aEcwjBjlp6I5ZmLM1jMY-Mz5EsGecxjRF8LrL8E_UbA=s2560" alt="Fire">
+                    </div>
+                </section>
             </main>
             <button class="back-to-home-button hidden">Go Back to Games</button>
         </section>

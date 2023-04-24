@@ -9,6 +9,7 @@ var playBenderButton = document.querySelector('#bender-button');
 var homePage = document.querySelector('.home');
 var classicGamePage = document.querySelector('.classic-game');
 var benderGamePage = document.querySelector('.bender-game');
+var resultsPage = document.querySelector('.winner-annoucment')
 var backHomeButton = document.querySelector('.back-to-home-button')
 var userWins = document.querySelector('#user-wins')
 var computerWins = document.querySelector('#computer-wins')
@@ -61,6 +62,12 @@ function goBackToHome(){
     classicGamePage.classList.add('hidden')
     backHomeButton.classList.add('hidden')
 };
+
+function showResultsPage(){
+    resultsPage.classList.remove('hidden')
+    benderGamePage.classList.add('hidden')
+    classicGamePage.classList.add('hidden')
+}
 
 //functions to play game
 
@@ -147,13 +154,15 @@ function determineWinner(fighters){
 function displayResults(fighters, winner){
     if (winner === 'user'){
         console.log(`You WIN! 🎉`)
+        //change inner text of winner to this
     } else if (winner === 'computer'){
         console.log(`The computer wins this round 😭`)
     } else {
         console.log(`It's a draw!`)
     }
 //display fighters (use if statment to select imgs)
-console.log(fighters)
+    console.log(fighters)
+    showResultsPage()
 };
 
 function displayWins(){
