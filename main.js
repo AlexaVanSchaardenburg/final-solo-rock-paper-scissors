@@ -9,7 +9,7 @@ var playBenderButton = document.querySelector('#bender-button');
 var homePage = document.querySelector('.home');
 var classicGamePage = document.querySelector('.classic-game');
 var benderGamePage = document.querySelector('.bender-game');
-var gamePage = document.querySelector('.game-page')
+var fighterOptions = document.querySelector('.fighter-options')
 var resultsPage = document.querySelector('.winner-annoucment')
 var backHomeButton = document.querySelector('.back-to-home-button')
 var userWins = document.querySelector('#user-wins')
@@ -22,7 +22,7 @@ var computerFighter = document.querySelector('#computer-selected-fighter')
 playClassicButton.addEventListener('click', showClassicGame);
 playBenderButton.addEventListener('click', showBenderGame);
 backHomeButton.addEventListener('click', goBackToHome);
-gamePage.addEventListener('click', function(e){
+fighterOptions.addEventListener('click', function(e){
     selectUserFighter(e)
 })
 
@@ -89,7 +89,31 @@ function showResultsPage(){
 
 function selectUserFighter(e){
     //e is target - write code to create userFighter based off of e and invoke takeTurn function
-}
+    //bug with user fighter --- maybe undefined becasue the computer always wins
+    var userFighter;
+    console.log(e.target)
+    if (e.target.classList.contains('rock')){
+        userFighter = 'rock'
+        console.log(e.target)
+    } else if (e.target.classList.contains('paper')){
+        userFighter = 'paper'
+    } else if (e.target.classList.contains('scissors')){
+        userFighter = 'scissors'
+    } else if (e.target.classList.contains('earth')){
+        userFighter = 'earth'
+    } else if (e.target.classList.contains('air')){
+        userFighter = 'air'
+    } else if (e.target.classList.contains('fire')){
+        userFighter = 'fire'
+    } else if (e.target.classList.contains('water')){
+        userFighter = 'water'
+    } else if (e.target.classList.contains('spirit')){
+        userFighter = 'spirit'
+    }
+    console.log('click heard')
+    console.log(userFighter)
+    takeTurn(userFighter)
+};
 
 function takeTurn(userFighter){
     var currentFighters = []
