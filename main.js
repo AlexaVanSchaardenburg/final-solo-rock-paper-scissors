@@ -159,20 +159,16 @@ function determineWinner(fighters){
 
 
 function displayResults(fighters, winner){
+    hide(backHomeButton)
     if (winner === 'user'){
-        // console.log(`You WIN! 🎉`)
-        // //change inner text of winner to this
         winnerStatement.innerText = `You WIN! 🎉`
     } else if (winner === 'computer'){
-        // console.log(`The computer wins this round 😭`)
         winnerStatement.innerText = `The computer wins this round 😭`
     } else {
-        // console.log(`It's a draw!`)
         winnerStatement.innerText = `It's a draw!`
     }
-//display fighters (use if statment to select imgs)
-    console.log(fighters)
     showResultsPage()
+    setTimeout(resetPage, 5000)
 };
 
 function displayWins(){
@@ -180,9 +176,15 @@ function displayWins(){
     computerWins.innerText = `Wins: ${computer.wins}`
 };
 
-// function resetPage(){
-
-// };
+function resetPage(){
+    hide(resultsPage)
+    show(backHomeButton)
+    if (currentGame === 'classic'){
+        show(classicGamePage)
+    } else {
+        show(benderGamePage)
+    }
+};
 
 /* connecting game to DOM/visual
 - need event listener on main section - listens for click on page and targets the specific image - iterate trhough array of stored image ids to find matching id - store each image as a variable in array as id - use just name (aka 'fire') as id 
