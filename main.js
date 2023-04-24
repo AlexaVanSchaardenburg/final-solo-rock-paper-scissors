@@ -14,6 +14,8 @@ var backHomeButton = document.querySelector('.back-to-home-button')
 var userWins = document.querySelector('#user-wins')
 var computerWins = document.querySelector('#computer-wins')
 var winnerStatement = document.querySelector('.winner')
+var userFighter = document.querySelector('#user-selected-fighter')
+var computerFighter = document.querySelector('#computer-selected-fighter')
 
 //Event Listeners
 playClassicButton.addEventListener('click', showClassicGame);
@@ -157,6 +159,10 @@ function determineWinner(fighters){
     return winner
 };
 
+function displayWins(){
+    userWins.innerText = `Wins: ${user.wins}`
+    computerWins.innerText = `Wins: ${computer.wins}`
+};
 
 function displayResults(fighters, winner){
     hide(backHomeButton)
@@ -167,14 +173,41 @@ function displayResults(fighters, winner){
     } else {
         winnerStatement.innerText = `It's a draw!`
     }
+    changeFighterImages(fighters)
     showResultsPage()
-    setTimeout(resetPage, 5000)
+    setTimeout(resetPage, 7000)
 };
 
-function displayWins(){
-    userWins.innerText = `Wins: ${user.wins}`
-    computerWins.innerText = `Wins: ${computer.wins}`
+function changeFighterImages(fighters){
+    var userFighterImage = chooseImage(fighters[0])
+    var computerFighterImage = chooseImage(fighters[1])
+    userFighter.innerHTML = `<p>🤗</p>
+    <img class="fighter" src=${userFighterImage} alt="user-fighter">`
+    computerFighter.innerHTML = `<p>💻</p>
+    <img class="fighter" src=${computerFighterImage} alt="computer-fighter">`
 };
+
+function chooseImage(fighter){
+    var imgLink;
+    if (fighter === 'rock'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOSzmgDCFMwpoQmc3HpGtiZbBsLUbU8U_Q8ieUHwd5vULs5DPYnbllzG8gT4MocpyT_pYLpCqMKxKgHNlN2ShlzmddN5dA=s2560"
+    } else if (fighter === 'paper'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEORV8Y7IGEjBOcarUqfjlUeEGKIsfiKAcbZTfT7cs4arv4joLWXCmYpTJUwE9emUdkQpVGCVg33ytaWLChEk3CLGdom1Pw=s2560"
+    } else if (fighter === 'scissors'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEORxY6MonbE2QikFBOjEu9i118ZDTzviC-2O7CDugbTL28Q0LtXK75lLHQxYF_EBdckneOsvw84kvGS-Fk6oHJJ4iK77lA=s2560"
+    } else if (fighter === 'air'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOSoYt6qfxugqKlNlc_lCUAMeSLJ53PGvZRHOS0QPBQtcwfn5mGoA8TaCOBbiwUB0e7rG_En6gXAi3LGNRkCqRjYWyxlow=s2560"
+    } else if (fighter === 'fire'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOTfnx1a8z6KczG9bVJAUzh1EyGwM9k7AO4G0pb0ssF2Q37gG30aEcwjBjlp6I5ZmLM1jMY-Mz5EsGecxjRF8LrL8E_UbA=s2560"
+    } else if (fighter === 'earth'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOTUHJKlKO_XulXT4bZuvS1gIjLCV1gEQO4pPdpfuWK9zdjBRW3_YqG8A93DtIyC-lb3p9HkadHtld1ACkkvJkkFsWpm7Q=s2560"
+    } else if (fighter === 'water'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOT37JbXKW4WoppiVg8ne1-gpWi5qvImIx1_WNI6YF8RW9SHbKTlMTxX9iS6DFGtSU0qGPFGnPZ7W-0UQvF_2mPWyd9BVA=s2560"
+    } else if (fighter === 'spirit'){
+        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AFGJ81p44Z9xQFFld30r608MIp0pdznnPVjpV3zTtRZYY5ZQkHNjeSz2M0oZ5X6dA8vSn5Z3OnvuU8Wc6gRWPChBkr_LpIBnkA=s2560"
+    }
+    return imgLink
+}
 
 function resetPage(){
     hide(resultsPage)
