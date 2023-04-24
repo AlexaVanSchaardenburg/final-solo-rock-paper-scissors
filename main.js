@@ -13,6 +13,7 @@ var resultsPage = document.querySelector('.winner-annoucment')
 var backHomeButton = document.querySelector('.back-to-home-button')
 var userWins = document.querySelector('#user-wins')
 var computerWins = document.querySelector('#computer-wins')
+var winnerStatement = document.querySelector('.winner')
 
 //Event Listeners
 playClassicButton.addEventListener('click', showClassicGame);
@@ -42,25 +43,34 @@ function createGame(selectedGame){
 }
 
 //Functions to switch page views
+
+function show(element){
+    element.classList.remove('hidden')
+};
+
+function hide(element){
+    element.classList.add('hidden')
+};
+
 function showClassicGame(){
-    homePage.classList.add('hidden')
-    classicGamePage.classList.remove('hidden')
-    backHomeButton.classList.remove('hidden')
+    hide(homePage)
+    show(classicGamePage)
+    show(backHomeButton)
     currentGame = 'classic'
 };
 
 function showBenderGame(){
-    homePage.classList.add('hidden')
-    benderGamePage.classList.remove('hidden')
-    backHomeButton.classList.remove('hidden')
+    hide(homePage)
+    show(benderGamePage)
+    show(backHomeButton)
     currentGame = 'bender'
 };
 
 function goBackToHome(){
-    homePage.classList.remove('hidden')
-    benderGamePage.classList.add('hidden')
-    classicGamePage.classList.add('hidden')
-    backHomeButton.classList.add('hidden')
+    hide(benderGamePage)
+    hide(classicGamePage)
+    hide(backHomeButton)
+    show(homePage)
 };
 
 function showResultsPage(){
@@ -72,14 +82,11 @@ function showResultsPage(){
 //functions to play game
 
 function takeTurn(userFighter){
-    //userFighter determined by target of event
-    //updates DM with selections???
     var currentFighters = []
     var computerFighter = randomFighter(currentGame)
     currentFighters.push(userFighter)
     currentFighters.push(computerFighter)
     determineWinner(currentFighters)
-    // console.log(currentFighters)
 };
 
 function randomFighter(game){
@@ -153,12 +160,15 @@ function determineWinner(fighters){
 
 function displayResults(fighters, winner){
     if (winner === 'user'){
-        console.log(`You WIN! 🎉`)
-        //change inner text of winner to this
+        // console.log(`You WIN! 🎉`)
+        // //change inner text of winner to this
+        winnerStatement.innerText = `You WIN! 🎉`
     } else if (winner === 'computer'){
-        console.log(`The computer wins this round 😭`)
+        // console.log(`The computer wins this round 😭`)
+        winnerStatement.innerText = `The computer wins this round 😭`
     } else {
-        console.log(`It's a draw!`)
+        // console.log(`It's a draw!`)
+        winnerStatement.innerText = `It's a draw!`
     }
 //display fighters (use if statment to select imgs)
     console.log(fighters)
