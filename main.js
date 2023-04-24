@@ -164,3 +164,18 @@ function displayWins(){
 // function resetPage(){
 
 // };
+
+/* connecting game to DOM/visual
+- need event listener on main section - listens for click on page and targets the specific image - iterate trhough array of stored image ids to find matching id - store each image as a variable in array as id - use just name (aka 'fire') as id 
+- This id will be the userFighter
+
+
+savedPalettesSection.addEventListener('click', function (e) {
+    if (e.target.classList.contains("delete-button")) {
+        confirmDelete(e)
+    }
+    displaySaved();
+});
+
+we invoke takeTurn function on click with userFighter being determined by the event target
+*/
