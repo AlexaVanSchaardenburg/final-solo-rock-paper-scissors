@@ -135,24 +135,13 @@ function showResultsPage(){
 
 function selectUserFighter(e){
     var userFighter;
-    if (e.target.classList.contains('rock')){
-        userFighter = 'rock'
-    } else if (e.target.classList.contains('paper')){
-        userFighter = 'paper'
-    } else if (e.target.classList.contains('scissors')){
-        userFighter = 'scissors'
-    } else if (e.target.classList.contains('earth')){
-        userFighter = 'earth'
-    } else if (e.target.classList.contains('air')){
-        userFighter = 'air'
-    } else if (e.target.classList.contains('fire')){
-        userFighter = 'fire'
-    } else if (e.target.classList.contains('water')){
-        userFighter = 'water'
-    } else if (e.target.classList.contains('spirit')){
-        userFighter = 'spirit'
+    for (var i=0; i<fightersInfo.length; i++){
+        if (e.target.classList.contains(fightersInfo[i].name)){
+            userFighter = fightersInfo[i].name
+        }
     }
     takeTurn(userFighter)
+    return userFighter
 };
 
 function takeTurn(userFighter){
@@ -235,22 +224,10 @@ function changeFighterImages(fighters){
 
 function chooseImage(fighter){
     var imgLink;
-    if (fighter === 'rock'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOSzmgDCFMwpoQmc3HpGtiZbBsLUbU8U_Q8ieUHwd5vULs5DPYnbllzG8gT4MocpyT_pYLpCqMKxKgHNlN2ShlzmddN5dA=s2560"
-    } else if (fighter === 'paper'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEORV8Y7IGEjBOcarUqfjlUeEGKIsfiKAcbZTfT7cs4arv4joLWXCmYpTJUwE9emUdkQpVGCVg33ytaWLChEk3CLGdom1Pw=s2560"
-    } else if (fighter === 'scissors'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEORxY6MonbE2QikFBOjEu9i118ZDTzviC-2O7CDugbTL28Q0LtXK75lLHQxYF_EBdckneOsvw84kvGS-Fk6oHJJ4iK77lA=s2560"
-    } else if (fighter === 'air'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOSoYt6qfxugqKlNlc_lCUAMeSLJ53PGvZRHOS0QPBQtcwfn5mGoA8TaCOBbiwUB0e7rG_En6gXAi3LGNRkCqRjYWyxlow=s2560"
-    } else if (fighter === 'fire'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOTfnx1a8z6KczG9bVJAUzh1EyGwM9k7AO4G0pb0ssF2Q37gG30aEcwjBjlp6I5ZmLM1jMY-Mz5EsGecxjRF8LrL8E_UbA=s2560"
-    } else if (fighter === 'earth'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOTUHJKlKO_XulXT4bZuvS1gIjLCV1gEQO4pPdpfuWK9zdjBRW3_YqG8A93DtIyC-lb3p9HkadHtld1ACkkvJkkFsWpm7Q=s2560"
-    } else if (fighter === 'water'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AAOQEOT37JbXKW4WoppiVg8ne1-gpWi5qvImIx1_WNI6YF8RW9SHbKTlMTxX9iS6DFGtSU0qGPFGnPZ7W-0UQvF_2mPWyd9BVA=s2560"
-    } else if (fighter === 'spirit'){
-        imgLink = "https://lh3.googleusercontent.com/drive-viewer/AFGJ81p44Z9xQFFld30r608MIp0pdznnPVjpV3zTtRZYY5ZQkHNjeSz2M0oZ5X6dA8vSn5Z3OnvuU8Wc6gRWPChBkr_LpIBnkA=s2560"
+    for (var i=0; i<fightersInfo.length; i++){
+        if (fighter === fightersInfo[i].name){
+            imgLink = fightersInfo[i].imgLink
+        }
     }
     return imgLink
 }
@@ -267,6 +244,6 @@ function resetPage(){
 /* Things to Refactor:
 - store and access players and the currentGame through the game object --- game object becomes data model ✅
 - store fighters in array of objects - store their name, img, and who they beat in there ✅
-    - refactor long if else statments into for loops that look for that conditional
+    - refactor long if else statments into for loops that look for that conditional ✅
 - maybe instead of using fighters array over and over store each fighter in the data model and access it by name to help with readbility.
 */
