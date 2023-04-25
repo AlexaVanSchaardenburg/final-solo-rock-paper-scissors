@@ -1,7 +1,5 @@
-//Data Model
 var game = createGame('game')
 
-//Global Variable
 var fightersInfo = [
     {
         name: 'rock',
@@ -45,7 +43,6 @@ var fightersInfo = [
     },
 ]
 
-//Global Variables
 var playClassicButton = document.querySelector('#classic-button');
 var playBenderButton = document.querySelector('#bender-button');
 var homePage = document.querySelector('.home');
@@ -61,7 +58,6 @@ var winnerStatement = document.querySelector('.winner')
 var userFighter = document.querySelector('#user-selected-fighter')
 var computerFighter = document.querySelector('#computer-selected-fighter')
 
-//Event Listeners
 playClassicButton.addEventListener('click', showClassicGame);
 playBenderButton.addEventListener('click', showBenderGame);
 backHomeButton.addEventListener('click', goBackToHome);
@@ -71,9 +67,6 @@ fighterOptionsClassic.addEventListener('click', function(e){
 fighterOptionsBender.addEventListener('click', function(e){
     selectUserFighter(e)
 })
-
-
-//Functions
 
 function createPlayer(name, token){
     var player ={
@@ -94,8 +87,6 @@ function createGame(selectedGame){
     return game
 }
 
-//Functions to switch page views
-
 function show(element){
     element.classList.remove('hidden')
 };
@@ -108,14 +99,14 @@ function showClassicGame(){
     hide(homePage)
     show(classicGamePage)
     show(backHomeButton)
-    game.mode = 'classic'
+    currentGame = 'classic'
 };
 
 function showBenderGame(){
     hide(homePage)
     show(benderGamePage)
     show(backHomeButton)
-    game.mode = 'bender'
+    currentGame = 'bender'
 };
 
 function goBackToHome(){
@@ -131,8 +122,6 @@ function showResultsPage(){
     classicGamePage.classList.add('hidden')
 }
 
-//functions to play game
-
 function selectUserFighter(e){
     var userFighter;
     for (var i=0; i<fightersInfo.length; i++){
@@ -146,19 +135,19 @@ function selectUserFighter(e){
 
 function takeTurn(userFighter){
     var currentFighters = []
-    var computerFighter = randomFighter(game.mode)
+    var computerFighter = randomFighter(currentGame)
     currentFighters.push(userFighter)
     currentFighters.push(computerFighter)
     determineWinner(currentFighters)
 };
 
-function randomFighter(gameMode){
+function randomFighter(game){
     var classicOptions = ['rock', 'paper','scissors'];
     var benderOptions = ['water', 'earth', 'air', 'fire', 'spirit'];
-    if (gameMode === 'classic') {
+    if (game === 'classic') {
         var index = getRandomIndex(classicOptions)
         return classicOptions[index]
-    } else if (gameMode === 'bender'){
+    } else if (game === 'bender'){
         var index = getRandomIndex(benderOptions)
         return benderOptions[index]
     }
@@ -200,7 +189,6 @@ function displayWins(){
 };
 
 function displayResults(fighters, winner){
-    setTimeout(resetPage, 5000)
     hide(backHomeButton)
     if (winner === 'user'){
         winnerStatement.innerText = `You WIN! 🎉`
@@ -211,6 +199,7 @@ function displayResults(fighters, winner){
     }
     changeFighterImages(fighters)
     showResultsPage()
+    setTimeout(resetPage, 7000)
 };
 
 function changeFighterImages(fighters){
@@ -235,15 +224,9 @@ function chooseImage(fighter){
 function resetPage(){
     hide(resultsPage)
     show(backHomeButton)
-    if (game.mode === 'classic'){
+    if (currentGame === 'classic'){
         show(classicGamePage)
     } else {
         show(benderGamePage)
     }
 };
-/* Things to Refactor:
-- store and access players and the currentGame through the game object --- game object becomes data model ✅
-- store fighters in array of objects - store their name, img, and who they beat in there ✅
-    - refactor long if else statments into for loops that look for that conditional ✅
-- maybe instead of using fighters array over and over store each fighter in the data model and access it by name to help with readbility.
-*/
