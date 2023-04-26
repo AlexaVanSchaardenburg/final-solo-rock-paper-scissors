@@ -10,6 +10,7 @@ Fork and clone down this repository and run `open index.html` OR follow this [li
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![Screenshot 2023-04-26 at 12 31 58 PM](https://user-images.githubusercontent.com/125763236/234670117-7054af33-fb43-449f-a3b0-258c80452123.png)
 
 
 ### Context:
