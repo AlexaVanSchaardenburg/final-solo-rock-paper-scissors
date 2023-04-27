@@ -6,7 +6,7 @@ This app is a rock paper scissors game with two variations for the user to play.
 
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
-Fork and clone down this repository and run `open index.html` OR follow this [link](put link to page once public here)
+Fork and clone down this repository and run `open index.html` OR follow this [link]([put link to page once public here](https://alexavanschaardenburg.github.io/final-solo-rock-paper-scissors/))
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
